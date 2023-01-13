@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    color: black;
+    font-family: "Euclid Circular A", "Poppins";
+  }
+  
+  .textbox {
+    position: relative;
+  }
+  
+  .textbox input {
+    width: 260px;
+    height: 64px;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid #9f9f9f;
+    padding: 0 20px 0 56px;
+    font-size: 17px;
+    font-family: inherit;
+    color: black;
+    outline: none;
+  }
+  
+  .textbox input::placeholder {
+    color: black;
+  }
+  
+  .textbox input:valid {
+    border-color: #26dfae;
+  }
+  
+  .textbox .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -12px;
+    pointer-events: none;
+  }
+  
+  .validation {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #dd4949;
+    transform-origin: 50% 0%;
+    transition: 0.4s;
+  }
+  
+  .textbox input:valid ~ .validation {
+    transform: scaleY(0);
+  }

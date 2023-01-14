@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input
+      type="range"
+      id="rangeInput"
+      name="rangeInput"
+      min="0"
+      max="20"
+      value="0"
+      oninput="amount.value=rangeInput.value"
+    />
+
+    <output id="amount" name="amount" for="rangeInput">0</output>
+  </body>
+</html>

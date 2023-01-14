@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #1a1a1a;
+  color: #f9f9f9;
+  font-family: "Euclid Circular A";
+}

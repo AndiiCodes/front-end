@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #333;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.textbox {
+  position: relative;
+}
+
+.textbox input {
+  width: 260px;
+  height: 64px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #df2666;
+  padding: 0 20px 0 56px;
+  font-size: 17px;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+}
+
+.textbox input:focus ~ .icon {
+  opacity: 1;
+}
+
+.textbox input::placeholder {
+  /* color: rgb(255 255 255 / 50%); */
+  color: black;
+}
+
+.textbox input:valid {
+  border-color: #26dfae;
+}
+
+.textbox input:valid,
+.textbox input:valid ~ :is(.asterix, .icon) {
+  animation: none;
+}
+
+.textbox :is(input:valid) ~ .asterix {
+  opacity: 0;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    translate: 0;
+  }
+  25% {
+    translate: 8px 0;
+  }
+  75% {
+    translate: -8px 0;
+  }
+}
+
+.textbox .asterix {
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  font-size: 22px;
+  pointer-events: none;
+  color: #df2666;
+}
+
+.textbox .icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -12px;
+  opacity: 0.5;
+}
+
+.textbox input,
+.textbox .icon,
+.textbox .asterix {
+  animation: shake 0.1635s 0s 3;
+}

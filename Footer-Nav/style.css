@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: Poppins;
+  background: black;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  width: 240px;
+  height: 70px;
+  border-radius: 0 0 12px 12px;
+  background: #fff;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 23px;
+  left: 40px;
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: crimson;
+  transition: all 0.5s;
+}
+
+input {
+  position: absolute;
+  transform: scale(0);
+}
+
+label {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 1 1 auto;
+  cursor: pointer;
+}
+
+.icon,
+.text {
+  color: #ccc;
+  transition: all 0.15s;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+input:nth-child(1):checked ~ label.home .icon,
+input:nth-child(2):checked ~ label.find .icon,
+input:nth-child(3):checked ~ label.like .icon {
+  opacity: 0;
+}
+
+input:nth-child(1):checked ~ label.home .text,
+input:nth-child(2):checked ~ label.find .text,
+input:nth-child(3):checked ~ label.like .text {
+  opacity: 1;
+  color: black;
+}
+
+input:nth-child(1):checked ~ .indicator {
+  transform: translateX(0);
+}
+
+input:nth-child(2):checked ~ .indicator {
+  transform: translateX(80px);
+}
+
+input:nth-child(3):checked ~ .indicator {
+  transform: translateX(160px);
+}

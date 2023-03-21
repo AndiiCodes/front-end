@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a2031;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .btnContainer {
+    width: 320px;
+    height: 160px;
+    position: relative;
+  }
+  
+  .btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #3c3459;
+    border-radius: 999px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .knob {
+    width: 140px;
+    height: 140px;
+    position: relative;
+  }
+  
+  .top {
+    background-color: #827d96;
+    border-radius: 999px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .light {
+    border-radius: 999px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #4cc3e2 10.42%,
+      rgba(94, 199, 227, 0.791579) 27.08%,
+      rgba(113, 204, 229, 0.35) 45.31%,
+      rgba(144, 213, 231, 0.11) 65.1%,
+      rgba(158, 216, 231, 0.02) 78.12%,
+      rgba(177, 221, 233, 0) 95.83%
+    );
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  svg {
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    top: 90%;
+  }
+  
+  .no-highlight {
+    /* bad for accessibility - please don't use this in real world applications */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  

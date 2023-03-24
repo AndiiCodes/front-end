@@ -1,0 +1,62 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;900&display=swap");
+:root {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 3rem);
+  --bg: #fefefe;
+  background-color: var(--bg);
+}
+body > * {
+  width: 70vw;
+}
+
+h1, h2 {
+  margin: 0;
+}
+.hglt {
+  transition: 0.4s ease;
+  line-height: 1.3em;
+   padding: 0.05em 0.5em;
+   -webkit-box-decoration-break: clone;
+   box-decoration-break: clone;
+  color: #fff;
+  --c1: rgba(131 58 180 / 1);
+  --c2: rgba(252 176 69 / 1);
+  --c-m: rgba(253 29 29 / 1);
+  --g1: #0000 .5em,var(--c1) calc(.5em + 1px);
+  --g2: #0000 .5em,var(--c2) calc(.5em + 1px);
+  --g3: var(--c1),var(--c-m),var(--c2);
+  background: 
+    linear-gradient(90deg, var(--g3)) center,
+    linear-gradient(110deg,var(--g1)) left,
+    linear-gradient(-70deg,var(--g2)) right;
+  background-size:
+    calc(100% - 2em) calc(100% - .15em),
+    2em calc(100% - .15em),
+    2em calc(100% - .15em); 
+
+  background-repeat:no-repeat;
+  transform-origin: center calc(100% - 0.18em);
+}
+.hglt:hover {
+  color: #1f2020;
+  background-size:
+    calc(100% - 2em) max(0.1em, 2px),
+    2em max(0.1em, 2px),
+    2em max(0.1em, 2px); 
+  background-position-y: calc(100% - 0.18em);
+  text-shadow:
+     0 -0.05em 0 var(--bg),
+    -0.05em -0.05em 0 var(--bg),
+    -0.05em 0 0 var(--bg),
+    0 0.05em 0 var(--bg),
+    0.05em 0.05em 0 var(--bg),
+    0.05em 0 0 var(--bg);
+}

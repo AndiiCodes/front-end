@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background: #1b263b;
+    color: #778da9;
+    cursor: none;
+}
+
+#cursor {
+    position: fixed;
+    top: -16px;
+    left: -16px;
+    z-index: 1;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #e0e1dd;
+    opacity: 0;
+}
+
+#cursor.-activated {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.tags-cloud {
+    position: fixed;
+    top: calc(50% - 30vmin);
+    left: calc(50% - 30vmin);
+    height: 60vmin;
+    width: 60vmin;
+    list-style: none;
+    opacity: 0;
+}
+
+.tags-cloud.-loaded {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.tags-cloud > .tag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5vmin;
+    font-weight: bold;
+    transition: transform .5s linear, opacity .5s linear;
+}
+
+.tags-cloud > .tag > .wrap {
+    display: inline-block;
+    transform: translateX(-50%) translateY(-50%);
+}

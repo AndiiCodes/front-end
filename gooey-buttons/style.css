@@ -1,0 +1,183 @@
+body,
+html {
+height: 100%;
+display: grid;
+place-content: center;
+grid-template-columns: repeat(2, 1fr);
+width: 100vw;
+background: #e8e6de;
+--elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+--x: 0px;
+--y: 0px;
+--t: rgba(255, 255, 255, 0.001);
+--lightest: #f897d5;
+--light: #f567c2;
+--dark: #755ad0;
+--darkest: #1a2a6c;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+/* Apply box-sizing property to all elements inside the body */
+body * {
+box-sizing: border-box;
+}
+.container {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    mix-blend-mode: darken;
+    z-index: 1;
+    margin: 0 -1rem;
+    }
+    
+    .container:last-of-type {
+    justify-content: start;
+    }
+    
+    .container:hover {
+    z-index: 2;
+    }
+    
+    .container:nth-of-type(2) {
+    --lightest: #ffd986;
+    --light: #fdbb2d;
+    --dark: #b21f1f;
+    --darkest: #1a2a6c;
+    }
+    
+    .container .inner {
+    display: inline-block;
+    position: relative;
+    pointer-events: all;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0 0 0 500vmin #e8e6de;
+    }
+    
+    .container .inner:hover:before {
+    background-size: 35% 60%, 100% 100%, 100%;
+    }
+    
+    .container .inner:hover:before {
+    filter: blur(2px) brightness(1);
+    background-size: 0px 0px, 100% 100%, 100%;
+    transition: transform 0.5s var(--elastic),
+    background-size 0.25s ease-in-out;
+    }
+    
+    .container .inner:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0rem;
+    left: 0rem;
+    filter: blur(2px) brightness(0);
+    background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--t) 20%
+    ),
+    radial-gradient(
+    circle at center,
+    var(--lightest),
+    var(--light) 5%,
+    var(--dark) 30%,
+    var(--darkest) 50%
+    ),
+    var(--darkest);
+    background-size: 0px 0px, 0px 0px, 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    mix-blend-mode: lighten;
+    z-index: 2;
+    transition: transform 0.5s var(--elastic), background-size 0.25s ease-in-out,
+    filter 0.5s ease-in-out;
+    transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%));
+    z-index: 2;
+    pointer-events: none;
+    }
+    button {
+        padding: 3.5rem 6rem;
+        border: none;
+        font-size: 1.5rem;
+        position: relative;
+        background: transparent;
+        color: #fff;
+        z-index: 2;
+        cursor: pointer;
+        font-weight: 100;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: "Avant", "Futura", sans-serif;
+        text-shadow: clamp(-8px, calc((var(--width) / 2 - var(--x)) / 8), 8px) clamp(-8px, calc((var(--height) / 2 - var(--y)) / 8), 8px) 12px rgba(0, 0, 0, 0);
+        transition: text-shadow 500ms var(--elastic);
+      }
+      
+      button:hover {
+        --shadow: max(calc((var(--width) / 2 - var(--x)) / 8 + ((var(--height) / 2 - var(--y)) / 3)), calc((((var(--width) / 2 - var(--x)) / 8) + ((var(--height) / 2 - var(--y)) / 3)) * -1), 5px);
+        text-shadow: clamp(-6px, calc((var(--width) / 2 - var(--x)) / 12), 6px) clamp(-4px, calc((var(--height) / 2 - var(--y)) / 16), 4px) var(--shadow) #000;
+      }
+      
+      button:hover ~ .blob:before {
+        transition: transform 500ms var(--elastic), box-shadow 1000ms var(--elastic);
+        transform: translate(clamp(5%, calc(var(--x) - 50%), 550%), clamp(1rem, calc(var(--y) - 50%), 5rem)) scale(1.25);
+        box-shadow: 0 0 0 0.05rem #fff, 0 -6rem 0 1.25rem #fff, 0 6rem 0 1.25rem #fff;
+      }
+      
+      button:active {
+        cursor: grab;
+      }
+      
+      button:active:hover ~ .blob:before {
+        box-shadow: 0 0 0 0rem #fff, 0 -5rem 0 1.75rem #fff, 0 5rem 0 1.75rem #fff;
+        transition: transform 500ms var(--elastic), box-shadow 500ms var(--elastic);
+        transform: translate(clamp(5%, calc(var(--x) - 50%), 550%), clamp(calc(50% + 1rem), calc(var(--y) - 50%), calc(50% + 1.5rem))) scale(1);
+      }
+      .blob {
+        position: absolute;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        filter: blur(12px) contrast(25);
+        z-index: 1;
+      }
+      .blob:before,
+      .blob:after {
+        content: "";
+        position: absolute;
+        background: #000;
+      }
+      .blob:before {
+        width: 15%;
+        height: auto;
+        z-index: 2;
+        transition: transform 750ms var(--elastic), box-shadow 500ms var(--elastic);
+        aspect-ratio: 1/1;
+        box-shadow: 0 0 0 0.75rem #fff, 0 -8rem 0 -2rem #fff, 0 8rem 0 -2rem #fff;
+        left: 0;
+        top: 0;
+        border-radius: 100%;
+        transform: translate(
+            clamp(10%, calc(var(--x) - 50%), 550%),
+            clamp(1rem, calc(var(--y) - 50%), 5rem)
+          )
+          scale(0);
+      }
+      .blob:after {
+        width: calc(100% - 4rem);
+        height: calc(100% - 4rem);
+        top: 2rem;
+        left: 2rem;
+        border-radius: 5rem;
+        box-shadow: 0 0 0 8rem #fff;
+      }

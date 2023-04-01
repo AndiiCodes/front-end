@@ -3,6 +3,7 @@ body {
   height: 100vh;
   margin: 0rem;
   overflow: hidden; 
+
 }
 
 @keyframes rotate {

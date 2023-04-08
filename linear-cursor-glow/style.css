@@ -1,0 +1,95 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #060606;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.features {
+  width: 75vw;
+  height: 50vh;
+  display: grid;
+  grid-column-gap: 0.3rem;
+  grid-row-gap: 0.3rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.feature {
+  --x-px: calc(var(--x) * 1px);
+  --y-px: calc(var(--y) * 1px);
+  --border: 2px;
+  background: rgba(255, 255, 255, 0.125);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.feature:before,
+.feature:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  border-radius: inherit;
+  background: radial-gradient(
+    800px circle at var(--x-px) var(--y-px),
+    rgba(255, 255, 255, 0.3),
+    transparent 40%
+  );
+}
+
+.feature:before {
+  z-index: 1;
+}
+
+.feature:after {
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.feature:hover:after {
+  opacity: 1;
+}
+
+.feature-content {
+  background: rgb(19, 19, 21);
+  border-radius: inherit;
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  inset: var(--border);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 0.5rem;
+  padding: 0 1rem 0 2rem;
+}
+
+.feature-content > strong {
+  align-self: self-end;
+  font-size: 125%;
+}
+
+.feature-content > span {
+  opacity: 0.7;
+}

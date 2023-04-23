@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 200;
+  letter-spacing:-.05em;
+}
+
+html {
+  scroll-behavior: initial;
+  overflow: hidden;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #161616;
+  color: white;
+}
+
+header{
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+p{
+  margin-bottom: 4rem;
+  font-size: clamp(20px, 5vw, 70px);
+  padding: 0 5%;
+}
+
+span{
+  opacity: .1;
+}
+
+#bottom{
+  margin-bottom: 100vh;
+}

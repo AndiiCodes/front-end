@@ -1,0 +1,142 @@
+
+
+:root {
+  --color-primary: purple;
+  accent-color: var(--color-primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  height: 100vh;
+  padding-top: var(--_header-h, 4rem);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  margin-block-end: 1rem;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.header {
+  padding: 2rem;
+  position: fixed;
+  inset: 0 0 auto 0;
+  transition: color 0.3s;
+  z-index: 10;
+  color: #fff;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  transform: scaleY(0);
+  transition: transform 0.3s linear;
+  transform-origin: top center;
+  will-change: transform;
+}
+.header.is-sticky {
+  color: #000;
+}
+.header.is-sticky::before {
+  transform: scaleY(1);
+}
+.header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav ul li a {
+  color: inherit;
+}
+
+.hero {
+  display: grid;
+  position: relative;
+  margin-block-start: calc(var(--_header-h, 4rem) * -1);
+  min-height: 500px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(47, 50, 45, 0) 0%, rgba(47, 50, 45, 0.42) 42.71%, rgba(47, 50, 45, 0.76) 100%);
+}
+.hero__thumb, .hero__caption {
+  grid-area: 1/1;
+}
+.hero__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 60%;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+}
+.hero__caption > p {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #fae476;
+}
+
+.content {
+  padding-block: 2rem;
+  width: min(100% - 2rem, 70ch);
+  margin-inline: auto;
+  line-height: 1.5;
+}
+
+.flow > * + * {
+  margin-block-start: 1em;
+}
+
+.logo {
+  mix-blend-mode: difference;
+  color: #fff;
+}

@@ -1,0 +1,118 @@
+/* index.css */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .card {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.container .card h2 {
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 130px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.container .card p {
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: #333;
+  opacity: 0.7;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container .card .pic {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80");
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.container .card .social {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  height: 64px;
+  border-radius: 80px;
+}
+.container .card .social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.container .card .social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.container .card .social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.container .card .social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.container .card:hover i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.container .card button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #DA4D1D;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+
+.container .card:hover button {
+  transform: scale(16.5);
+}
+.container .card:hover p {
+  color: #fff;
+}
+.container .card:hover .pic {
+  filter: grayscale(0);
+}

@@ -1,4 +1,28 @@
-/* index.css */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+   font-family: 'Roboto Slab', serif;
+    margin: 0;
+  width: 100%;
+height: 100%;
+    padding: 0;
+}
+
+body {
+  background-color: #D2DBDD;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .cards {
     width: 100%;
     display: flex;
@@ -9,14 +33,14 @@
 }
 /*If you want to add more card.. 
 just rename card-- for example
-card--3 , and change the img url
+card--3
 */
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('image-url');
+    background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
-background-image: url('image-url');
+background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 }
 
 .card__like {

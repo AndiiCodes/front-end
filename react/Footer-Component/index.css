@@ -1,0 +1,99 @@
+body{
+  padding: 0;
+  margin: 0;
+
+}
+
+section{
+  padding: 60px;
+  background-color:black;
+  overflow: hidden;
+}
+.banner {
+  margin-bottom: 56px;
+  padding: 44px;
+  border-radius: 32px;
+  background: rgb(179,108,205);
+background: linear-gradient(90deg, rgba(179,108,205,1) 0%, rgba(227,182,84,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-content {
+  width: 100%;
+  max-width: 50%;
+  padding: 32px;
+}
+
+.banner-heading {
+  font-size: 48px;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.banner-action {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  margin-top: 16px;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.cta-link {
+  margin-left: 250px;
+  display: inline-block;
+  padding: 16px 20px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(30, 30, 30);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.cta-link:hover {
+  background-color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: auto;
+  padding: 32px;
+}
+
+.footer-heading {
+  margin-bottom: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 16px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #c0c0c0;
+}

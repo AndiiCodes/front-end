@@ -1,0 +1,68 @@
+/* index.css */
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, #ba7453, #d1a984);
+  z-index: -1;
+}
+
+nav{
+  display: grid;
+  grid-template-columns:  10% 1fr 1fr 10%;
+  min-height: 10vh;
+  color: #fff;
+  align-items: center;
+}
+
+#logo{
+  grid-column: 2/3;
+  font-size: 24px;
+}
+
+.hamburger{
+  justify-self: flex-end;
+  height: 40px;
+  width: 40px;
+}
+
+section{
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero:after{
+  content: '';
+  background: rgba(0,0,0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline{
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 100px;
+  transform: translate(-20%, -70%);
+  color: #fff;
+  z-index: 3;
+ }

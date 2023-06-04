@@ -1,0 +1,73 @@
+body {
+  background-color: #1D1D1D;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Droid Sans", sans-serif;
+}
+body:before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  width: 4px;
+  background-color: #fff;
+}
+body .entries {
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  left: -5px;
+}
+body .entries .entry {
+  width: calc(50% - 80px);
+  float: left;
+  padding: 20px;
+  clear: both;
+  text-align: right;
+}
+body .entries .entry:not(:first-child) {
+  margin-top: -60px;
+}
+body .entries .entry .title {
+  font-size: 32px;
+  margin-bottom: 12px;
+  position: relative;
+  color: #fff;
+}
+body .entries .entry .title:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 4px solid #ffffff;
+  background-color: #1D1D1D;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -73px;
+  z-index: 1000;
+}
+body .entries .entry .title.big:before {
+  width: 24px;
+  height: 24px;
+  transform: translate(8px, -50%);
+}
+body .entries .entry .body {
+  color: #aaa;
+}
+body .entries .entry .body p {
+  line-height: 1.4em;
+}
+body .entries .entry:nth-child(2n) {
+  text-align: left;
+  float: right;
+}
+body .entries .entry:nth-child(2n) .title:before {
+  left: -63px;
+}
+body .entries .entry:nth-child(2n) .title.big:before {
+  transform: translate(-8px, -50%);
+}

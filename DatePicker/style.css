@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  background: #eee;
+}
+
+body {
+  margin: auto;
+}
+
+:root {
+  --color-primary: #00AEF2;
+}
+
+.calendar {
+  font-size: 3vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.25em 0;
+  margin: auto;
+  padding: 1em;
+  background: #FFF;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  user-select: none;
+}
+
+.day:first-child {
+  grid-column-start: 4;
+}
+
+.day {
+  padding: 0.5em;
+  text-align: center;
+}
+.day::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.day[data-selected]::before {
+  border-radius: 0.5em;
+}
+.day[data-selected=start]::before {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.day[data-selected], .day[data-selected] ~ .day {
+  color: white;
+}
+.day[data-selected]::before, .day[data-selected] ~ .day::before {
+  background-color: var(--color-primary);
+}
+.day[data-selected=start] ~ .day:not([data-selected=end])::before {
+  opacity: 0.5;
+}
+.day[data-selected=end][data-selected=end]::before {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.day[data-selected=end] ~ .day {
+  color: inherit;
+}
+.day[data-selected=end] ~ .day::before {
+  background-color: transparent;
+}

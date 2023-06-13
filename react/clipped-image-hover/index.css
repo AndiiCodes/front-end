@@ -1,4 +1,19 @@
-/* index.css */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
+  margin: 0;
+  background: #f2f0ed;
+  overflow: hidden;
+}
+
 .container {
   position: relative;
   display: flex;

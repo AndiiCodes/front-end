@@ -1,0 +1,254 @@
+.image-hover-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.image-hover-container .container {
+  position: relative;
+  height: 430px;
+  width: 310px;
+  margin: auto;
+  display: -webkit-box;
+}
+.image-hover-container .container:hover > .bottom-right {
+  top: 55%;
+  left: 80%;
+  box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+  width: 350px;
+}
+.image-hover-container .container:hover > .middle {
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  box-shadow: 0px 23px 33px rgba(0, 0, 0, 0.34);
+}
+.image-hover-container .container:hover > .middle .overlay {
+  opacity: 1;
+  z-index: 1;
+}
+.image-hover-container .container:hover > .middle .overlay p:nth-child(1) {
+  padding-top: 0;
+}
+.image-hover-container .container:hover > .top-left {
+  left: -70px;
+  top: -90px;
+  width: 150px;
+  box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+}
+.image-hover-container .container:hover > .top-right {
+  left: 250px;
+  top: -90px;
+  width: 260px;
+  height: 280px;
+  box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+}
+.image-hover-container .container:hover > .bottom-left {
+  left: -89%;
+  top: 65%;
+  width: 360px;
+  box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+}
+.image-hover-container .container .lancaster {
+  background: url(img.png) no-repeat;
+}
+.image-hover-container .container .lake-district {
+  background: url(img.png) no-repeat;
+}
+.image-hover-container .container .bg-image {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 10%;
+}
+.image-hover-container .container .middle {
+  transition: 500ms all;
+  transition-delay: 0.25s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 17px 23px rgba(0, 0, 0, 0.34);
+}
+.image-hover-container .container .middle .bg-image {
+  height: 100%;
+  width: 100%;
+}
+.image-hover-container .container .middle .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  background: rgba(67, 27, 12, 0.75);
+  display: flex;
+  flex-direction: column;
+  transition: 300ms all;
+  transition-delay: 0.37s;
+  opacity: 0;
+  text-decoration: none;
+  z-index: -1;
+}
+.image-hover-container .container .middle .overlay p {
+  position: relative;
+  margin: auto;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  opacity: 0.8;
+}
+.image-hover-container .container .middle .overlay p:nth-child(1) {
+  margin-bottom: 4px !important;
+  padding-top: 30px;
+  transition: all 400ms;
+  transition-delay: 0.3s;
+}
+.image-hover-container .container .middle .overlay p:nth-child(2) {
+  margin-top: 4px !important;
+}
+.image-hover-container .container .middle .overlay .mobile-link {
+  display: none;
+}
+.image-hover-container .container .bottom-right {
+  transition: 800ms all;
+  transition-delay: 0.15s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  position: absolute;
+  left: 0%;
+  top: 48%;
+  width: 100%;
+  box-shadow: 0px 37px 29px rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+.image-hover-container .container .bottom-right .bg-image {
+  height: 220px;
+  width: 100%;
+}
+.image-hover-container .container .bottom-left {
+  transition: 800ms all;
+  transition-delay: 0.17s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  position: absolute;
+  left: 0%;
+  top: 48%;
+  width: 100%;
+  z-index: 1;
+}
+.image-hover-container .container .bottom-left .bg-image {
+  height: 220px;
+  width: 100%;
+}
+.image-hover-container .container .top-left {
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  transition: 600ms all;
+  transition-delay: 0.19s;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 150px;
+  z-index: 1;
+}
+.image-hover-container .container .top-left .bg-image {
+  height: 220px;
+  width: 100%;
+}
+.image-hover-container .container .top-right {
+  transition: 500ms all;
+  transition-delay: 0.08s;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 300px;
+  height: 260px;
+  z-index: 1;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+}
+.image-hover-container .container .top-right .bg-image {
+  float: right;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 920px) {
+  .image-hover-container {
+    transform: scale(0.8) translateX(0px);
+    overflow: hidden;
+  }
+  .image-hover-container .overlay p:nth-child(1) {
+    margin-top: 125px;
+  }
+  .image-hover-container .overlay p:nth-child(2) {
+    margin-bottom: 30px !important;
+  }
+  .image-hover-container .overlay .mobile-link {
+    display: block !important;
+    margin-top: 0px !important;
+  }
+  .image-hover-container .bottom-right, .image-hover-container .bottom-left, .image-hover-container .top-left, .image-hover-container .top-right {
+    box-shadow: 0px 0px 0px !important;
+  }
+}
+@media (max-width: 350px) {
+  .bottom-right, .bottom-left, .top-left, .top-right {
+    display: none !important;
+  }
+}
+.loading-container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  transition: 600ms all;
+}
+.loading-container #loading {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  background: rgba(67, 27, 12, 0.75);
+  border-radius: 50%;
+  animation: boing 0.8s linear infinite;
+  position: relative;
+  top: calc(50% - 35px);
+}
+.loading-container #loading:before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  animation: boing-inner 0.8s linear infinite;
+}
+@keyframes boing {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes boing-inner {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

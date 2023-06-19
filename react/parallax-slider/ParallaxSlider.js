@@ -112,3 +112,7 @@ export default function ParallaxSlider() {
     </div>
   );
 }
+
+
+// make sure to include JQuery cdn in your public/index.html file.
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

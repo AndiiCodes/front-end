@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram: AndiiCodes || Telegram: AndiiCodes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body x-data="{open : false}">
+  <div class="modal" x-show="open">
+    <div class="modal__overlay">
+      <div class="modal__overlay__1"></div>
+      <div class="modal__overlay__2"></div>
+    </div>
+    <div class="modal__content">
+      <div class="modal__image">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3027&q=80">
+      </div>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea beatae natus!</h1>
+      <button x-on:click="open = false">Lukk</button>
+    </div>
+  </div>
+
+  <button x-on:click="open = true">Click me!</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+</body>
+</html>

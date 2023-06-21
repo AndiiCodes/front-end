@@ -36,3 +36,7 @@ export default function Modal() {
     </>
   );
 }
+
+
+// dont forget to include Alpine.js cdn in your project!
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>

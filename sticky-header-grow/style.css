@@ -1,0 +1,76 @@
+/* index.css */
+:root {
+  --color-primary: purple;
+  accent-color: var(--color-primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  height: 300vh;
+  background-color: lightslategray;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  margin-block-end: 1rem;
+  font-size: 3rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  padding: 1rem 2rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 4rem;
+  width: min(90%, 1200px);
+  margin-inline: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.header.is-sticky {
+  width: 100%;
+  top: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+
+.header__logo {
+  color: lightslategray;
+}

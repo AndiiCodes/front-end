@@ -1,0 +1,104 @@
+/* index.css  */
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero__waves {
+  background-color: rgba(42, 123, 210, 0.5);
+  border-radius: 38% 42%;
+  filter: blur(30px);
+  margin-top: 0;
+  top: 70%;
+  z-index: -1;
+}
+.hero__waves, .hero__waves::after, .hero__waves::before {
+  animation: spin 30s infinite linear;
+  height: 250vw;
+  position: fixed;
+  transition: all 0.5s ease;
+  width: 250vw;
+}
+.hero__waves::after {
+  animation-duration: 24s;
+  background-color: rgba(160, 57, 147, 0.5);
+  border-radius: 48% 42%;
+  content: "";
+}
+.hero__waves::before {
+  animation-duration: 26s;
+  background-color: rgba(100, 200, 250, 0.5);
+  border-radius: 40% 38%;
+  content: "";
+}
+.hero__waves.is-centered {
+  margin-top: -125px;
+  top: 50%;
+}
+.hero__waves.is-centered, .hero__waves.is-centered::after, .hero__waves.is-centered::before {
+  animation-duration: 6s;
+  height: 200px;
+  width: 200px;
+}
+
+.hero__title {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.hero__button {
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  height: 40px;
+  position: relative;
+  width: 170px;
+}
+
+.content {
+  align-items: center;
+  background-color: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 24px;
+  gap: 30px;
+  justify-content: center;
+  line-height: 1.4;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.content__paragraph {
+  max-width: 100%;
+  width: 560px;
+}
+.content__paragraph:first-child::first-letter {
+  font-family: serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: #000023;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

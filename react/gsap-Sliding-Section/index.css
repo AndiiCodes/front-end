@@ -1,0 +1,30 @@
+/* index.css  */
+.section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.section--fake {
+  border: 2px dashed #313146;
+}
+
+.section--sliding {
+  background-image: linear-gradient(45deg, #3023AE 0%, #f09 100%);
+}
+
+body {
+  background-color: #000023;
+  color: #fff;
+  font-family: Helvetica, Arial;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}

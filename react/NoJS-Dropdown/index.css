@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-blue-900: #081030;
+  --c-blue-800: #111b40;
+  --c-blue-700: #152148;
+  --c-blue-500: #1d7bdb;
+  --c-blue-300: #293359;
+  --c-blue-200: #4e5985;
+  --c-blue-100: #dfe8ff;
+}
+:root * {
+  scrollbar-width: 0;
+}
+:root *::-webkit-scrollbar {
+  background-color: transparent;
+  width: 12px;
+}
+:root *::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background-color: var(--c-blue-200);
+  border: 4px solid var(--c-blue-700);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-size: 1.125rem;
+  background-color: var(--c-blue-900);
+  color: var(--c-blue-100);
+  font-weight: 500;
+  overflow: hidden;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  max-width: 400px;
+  width: 90%;
+}
+
+legend {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+details {
+  position: relative;
+}
+details summary {
+  background-color: var(--c-blue-700);
+  border: 2px solid var(--c-blue-300);
+  padding: 1rem;
+  position: relative;
+  border-radius: 8px;
+  padding-right: 3rem;
+  cursor: pointer;
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary:hover, details summary:focus {
+  border-color: var(--c-blue-500);
+}
+details summary i {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  transform-origin: center center;
+}
+details[open] summary {
+  border-color: var(--c-blue-500);
+}
+details[open] summary i {
+  color: var(--c-blue-500);
+  transform: scaleY(-1) translateY(50%);
+}
+details > div {
+  margin-top: 8px;
+  background-color: var(--c-blue-700);
+  border: 2px solid var(--c-blue-300);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 50px;
+}
+details > div label {
+  position: relative;
+  cursor: pointer;
+}
+details > div input {
+  -webkit-appearance: none;
+  appearance: none;
+  visibility: hidden;
+  position: absolute;
+}
+details > div input:checked + span {
+  background-color: var(--c-blue-500);
+}
+details > div span:hover {
+  background-color: var(--c-blue-800);
+}
+details > div span {
+  display: block;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+}
+details[open]:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  width: calc(100% - 36px);
+  height: 50px;
+  flex-shrink: 0;
+  background-image: linear-gradient(to top, var(--c-blue-700), transparent);
+  border-radius: 8px;
+  pointer-events: none;
+  right: 18px;
+}

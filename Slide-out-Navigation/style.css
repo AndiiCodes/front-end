@@ -1,0 +1,55 @@
+/* index.css  */
+body {
+  margin: 0;
+  height: 100vh;
+  background: #242831;
+  color: white;
+  display: grid;
+  place-content: center;
+}
+
+header {
+  display: flex;
+}
+header .activator {
+  padding: 1em;
+  border-radius: 100%;
+  cursor: pointer;
+}
+header .activator:hover {
+  background: #1e2129;
+}
+
+img {
+  width: 100%;
+  max-width: 45px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #292e38;
+  border-radius: 0 5em 5em 0;
+  padding: 0.5em;
+  clip-path: ellipse(50% 50% at -50% 50%);
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  display: block;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  border-radius: 50%;
+}
+nav ul li a:hover {
+  background: #323844;
+}
+nav ul li a img {
+  opacity: 0;
+  transform: translateX(-10px);
+}

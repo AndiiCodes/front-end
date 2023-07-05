@@ -1,0 +1,46 @@
+body {
+  overscroll-behavior-x: none;
+  scroll-behavior: smooth;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding-bottom: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+  background-color: #f1bace;
+  white-space: nowrap;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+img {
+  transition: 0.3s;
+  width: 50%;
+  margin-right: 10vw;
+  height: 50vh;
+  margin-top: 25vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+}
+
+.animate {
+  opacity: 1;
+}
+
+img:first-child {
+  margin-left: 10vw;
+}

@@ -1,0 +1,58 @@
+body {
+  height: 3000px;
+}
+.progress-circle-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  width: 80px;
+  height: 80px;
+}
+
+.progress-circle-bar {
+  fill: none;
+  stroke: black;
+  stroke-width: 5;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-background {
+  fill: transparent;
+  stroke: #ededed;
+  stroke-width: 5;
+  stroke-dasharray: none;
+}
+
+
+.scroll-to-top {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.scroll-to-top svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  transition: all 0.1s ease;
+}

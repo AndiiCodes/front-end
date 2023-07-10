@@ -37,20 +37,31 @@ export default function ProgressCircle() {
 
     <div className="progress-circle-container">
     <div>
+    
     </div>
       <svg className="progress-circle" viewBox="0 0 100 100">
         <circle className="progress-background" cx={50} cy={50} r={45} />
         <circle className="progress-circle-bar" cx={50} cy={50} r={45} />
       </svg>
       <div
-        className="scroll-to-top" onClick={scrollToTop}
-        ref={scrollToTopElement} >
+        className="scroll-to-top"
+        onClick={scrollToTop}
+        ref={scrollToTopElement}
+      >
         <svg
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor">
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M12 19V5M5 12l7-7 7 7" />
         </svg>
+        
       </div>
+
     </div>
   );
 }

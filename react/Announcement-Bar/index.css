@@ -1,0 +1,44 @@
+/* index.css  */
+html, body {
+  height: 100%;
+}
+
+body {
+  
+  background-color: black;
+}
+
+button {
+  width: 100%;
+  padding: 1em 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  color: #E5E4E2;
+  background: #333;  
+  border-color: none;
+  line-height: 1;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  border: none; 
+  border-bottom: 2px solid #E5E4E2; 
+  background-color: transparent; 
+  
+}
+button:hover {
+  background-color: rgba(51, 51, 51, 0.025);
+}
+button:hover > span {
+  animation-play-state: paused;
+}
+button span {
+  animation: marquee 5s infinite normal linear;
+  padding: 0 0.5em;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}

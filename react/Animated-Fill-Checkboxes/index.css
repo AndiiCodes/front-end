@@ -1,0 +1,236 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--bg: #e3e4e8;
+	--checkBg: #ffffff;
+	--checkBorder: #c7cad1;
+	--fg: #17181c;
+	--fgDim: #5c6270;
+	--primary: #255ff4;
+	--dur: 0.6s;
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+body, input {
+	color: var(--fg);
+	font: 1em/1.5 system-ui, -apple-system, sans-serif;
+}
+body {
+	background: var(--bg);
+	display: grid;
+	height: 100vh;
+	place-items: center;
+}
+label, input[type=checkbox] {
+	cursor: pointer;
+}
+label {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 0.75em;
+	position: relative;
+	-webkit-tap-highlight-color: transparent;
+}
+input[type=checkbox], input[type=checkbox]:before, input[type=checkbox]:after {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+input[type=checkbox], input[type=checkbox]:before {
+	background: var(--checkBg);
+	border-radius: 0.2em;
+	box-shadow: 0 0 0 1px var(--checkBorder) inset;
+}
+input[type=checkbox]:before, input[type=checkbox]:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+input[type=checkbox] {
+	margin-right: 0.75em;
+	-webkit-appearance: none;
+	appearance: none;
+}
+input[type=checkbox] + span {
+	animation: brighten var(--dur) linear;
+}
+input[type=checkbox]:before {
+	animation: unstrike var(--dur) linear;
+	content: "";
+	transform-origin: 0 50%;
+	z-index: 1;
+}
+input[type=checkbox]:after {
+	color: var(--primary);
+	content: "\2713";
+	font-size: 1.5em;
+	line-height: 1;
+	text-align: center;
+}
+input[type=checkbox]:focus {
+	outline: transparent;
+}
+input[type=checkbox]:focus + span {
+	text-decoration: underline;
+}
+input[type=checkbox]:checked + span {
+	animation-name: dim;
+	color: var(--fgDim);
+}
+input[type=checkbox]:checked:before {
+	animation-name: strike;
+	background: var(--fgDim);
+	border-radius: 0;
+	box-shadow: 0 0 0 1px var(--fgDim) inset;
+	transform: translateX(2.25em) scale(1,0.05);
+	width: calc(100% - 2.25em);
+}
+input[type=checkbox].pristine:before, input[type=checkbox].pristine + span {
+	animation: none;
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #17181c;
+		--checkBg: #2e3138;
+		--checkBorder: #454954;
+		--fg: #e3e4e8;
+		--fgDim: #8f95a3;
+		--primary: #5583f6;
+	}
+}
+/* Animations */
+@keyframes dim {
+	from, 83% {
+		color: var(--fg);
+	}
+	to {
+		color: var(--fgDim);
+	}
+}
+@keyframes brighten {
+	from {
+		color: var(--fgDim);
+	}
+	17%, to {
+		color: var(--fg);
+	}
+}
+@keyframes unstrike {
+	from {
+		background: var(--fgDim);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fgDim) inset;
+		transform: translateX(2.25em) scale(1,0.05);
+		width: calc(100% - 2.25em);
+	}
+	14% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(2.25em) scale(1,0.05);
+		width: calc(100% - 2.25em);
+	}
+	29% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(2.75em) scale(1,0.05);
+		width: calc(100% - 2.25em);
+	}
+	43% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(-0.5em) scale(0.75,0.05);
+		width: 1.5em;
+	}
+	57% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(0) scale(1,0.05);
+		width: 1.5em;
+	}
+	71% {
+		background: var(--fg);
+		border-radius: 0.2em;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(0) scale(1,1.25);
+		width: 1.5em;
+	}
+	86% {
+		background: var(--fg);
+		border-radius: 0.2em;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(0) scale(1,1);
+		width: 1.5em;
+	}
+	to {
+		background: var(--checkBg);
+		border-radius: 0.2em;
+		box-shadow: 0 0 0 1px var(--checkBorder) inset;
+		transform: translateX(0) scale(1,1);
+		width: 1.5em;
+	}
+}
+@keyframes strike {
+	from {
+		background: var(--checkBg);
+		border-radius: 0.2em;
+		box-shadow: 0 0 0 1px var(--checkBorder) inset;
+		transform: translateX(0) scale(1,1);
+		width: 1.5em;
+	}
+	17% {
+		background: var(--fg);
+		border-radius: 0.2em;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(0) scale(1,1);
+		width: 1.5em;
+	}
+	33% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(0) scale(1,0.05);
+		width: 1.5em;
+	}
+	50% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(-0.5em) scale(1,0.05);
+		width: 1.5em;
+	}
+	67% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(2.25em) scale(1.25,0.05);
+		width: calc(100% - 2.25em);
+	}
+	83% {
+		background: var(--fg);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fg) inset;
+		transform: translateX(2.25em) scale(1,0.05);
+		width: calc(100% - 2.25em);
+	}
+	to {
+		background: var(--fgDim);
+		border-radius: 0;
+		box-shadow: 0 0 0 1px var(--fgDim) inset;
+		transform: translateX(2.25em) scale(1,0.05);
+		width: calc(100% - 2.25em);
+	}
+}
+
+
+form{
+	display: flex;
+	flex-direction: column;
+}

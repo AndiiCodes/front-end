@@ -1,0 +1,22 @@
+/* imageList.js styling */
+.image-list {
+  columns: 6 200px;
+  column-gap: 10px;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* SearchBar.js styling */
+.search-bar {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.search-bar form {
+  display: flex;
+  flex-direction: column;
+}

@@ -9,7 +9,7 @@ You can find the source code for all the Instagram posts here!
 If you want to see previews of these files, follow these steps:
 
 ## Step 1
-Go to <a href="andiicodes.github.com/front-end">andiicodes.github.com/front-end</a>
+Go to <a href="https://andiicodes.github.com/front-end">andiicodes.github.com/front-end</a>
 <br>
 <div>
   <img src="ignore/1.jpg" width="500" alt="Step 1">
@@ -24,7 +24,7 @@ Add any folder name that you like after the word "/front-end"
 
 ## Step 3
 For example:
-Go to "andiicodes.github.com/front-end/dropdown-list"
+Go to <a href="https://andiicodes.github.com/front-end/dropdown-list">andiicodes.github.com/front-end/dropdown-list</a>
 <br>
 <div>
   <img src="ignore/3.jpg" width="500" alt="Step 3">

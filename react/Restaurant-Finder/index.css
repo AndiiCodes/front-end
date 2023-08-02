@@ -1,0 +1,68 @@
+.restaurant-finder {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .restaurant-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .restaurant-details {
+    text-align: left;
+  }
+  
+  .restaurant-details h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+  }
+  
+  .restaurant-details p {
+    margin: 0 0 5px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .reviews {
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .review {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+  
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  
+    span {
+      color: #888;
+      font-size: 0.85rem;
+    }
+  }
+  

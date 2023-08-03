@@ -1,0 +1,44 @@
+.app-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .channel-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .channel-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .channel-info h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .video-item {
+    position: relative;
+    padding-bottom: 56.25%; 
+    overflow: hidden;
+  }
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

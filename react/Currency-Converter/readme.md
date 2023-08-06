@@ -1,4 +1,4 @@
-![Star Badge](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99)
+Don't Forget to  ![Star Badge](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99)
 # Usage
 ### Step 1: Sign up and Get Your API Key
 
@@ -14,5 +14,7 @@
 2. Run the command:
   ```npm i react-dropdown```
 3. This will install the react-dropdown package, allowing you to easily create dropdowns in your React app.
+#
+
 
 

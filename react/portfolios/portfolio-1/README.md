@@ -6,19 +6,6 @@ My goal was to try out a simplistic glass-morphism-like design and learn more ab
 
 Check it out [here](https://www.seekvisualartist.com/)
 
----
-
-## Showcase
-
-<div>
-    <img src='./.github/assets/1.png' width='1819' alt="home section">
-    <br>
-    <img src='./.github/assets/2.png' width='1821' alt="work section">
-    <br>
-    <img src='./.github/assets/3.png' width='1817' alt="contact section">
-</div>
-
----
 
 ## Prerequisites
 

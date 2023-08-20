@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
 
+
 function Tabs() {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabHeaders = [
-    { icon: 'fa fa-code', text: 'Code' }
-    // Rest of the Headers here.. 
+    { icon: 'fa fa-code', text: 'Code' },
+    { icon: 'fa fa-pencil-square', text: 'About' },
+    { icon: 'fa fa-bar-chart', text: 'Services' },
+    { icon: 'fa fa-envelope', text: 'Contact' }
   ];
 
   const tabContentData = [
     {
       title: 'Code',
-      content: 'Lorem ipsum dolor sit amet...'
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis eum similique...Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis eum similique...'
+    },
+    {
+      title: 'About',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis eum similique...'
+    },
+    {
+      title: 'Services',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis eum similique... '
+    },
+    {
+      title: 'Contact',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis eum similique...'
     }
-    // Rest of the content here.. 
   ];
 
   const handleTabClick = (index) => {
@@ -33,7 +47,7 @@ function Tabs() {
           </div>
         ))}
       </div>
-      <div className="tab-indicator" ></div>
+      <div className="tab-indicator" style={{ top: `calc(80px + ${activeTab * 50}px)` }}></div>
       <div className="tab-content">
         {tabContentData.map((tab, index) => (
           <div key={index} className={activeTab === index ? 'active' : ''}>

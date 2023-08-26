@@ -1,5 +1,5 @@
 
-# React.js Url Shortner usage
+# React.js Url Shortener usage
 
 
 ### Rebrandly Account Setup

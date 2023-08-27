@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+:root {
+  --bg-clr: #36d8a6;
+  --primary-clr: #015dfc;
+  --text-clr: #484848;
+  --white: #fff;
+  --hover-clr: #e7f0ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background: var(--bg-clr);
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-clr);
+}
+
+a {
+  color: var(--text-clr);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+section {
+  width: 300px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.button {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background: var(--primary-clr);
+  color: var(--white);
+}
+
+.sidebar {
+  width: 300px;
+  height: auto;
+  background: var(--white);
+  padding: 30px;
+  
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .profile .pro_img {
+  width: 50px;
+}
+
+.sidebar .profile .pro_info{
+  width: 190px;
+  margin-left: 15px;
+  opacity: 1;
+  transition: all 0.5s 0.3s ease;
+}
+
+.sidebar ul li a {
+  display: flex;
+  width: 240px;
+  padding: 10px 10px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+}
+
+.sidebar ul li a:hover {
+  color: var(--primary-clr);
+  background: var(--hover-clr);
+}
+
+.sidebar ul li a .icon {
+  font-size: 18px;
+  width: 40px;
+  display: inline-block;
+}
+
+.sidebar ul li a .item {
+  width: 170px;
+   display: inline-block;
+  vertical-align: text-bottom;
+  transition: all 0.5s 0.3s ease;
+}
+
+.sidebar ul li a .count {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--primary-clr);
+  color: var(--white);
+  padding: 3px 15px;
+  border-radius: 15px;
+  font-size: 8px;
+  transition: all 0.5s ease;
+}
+
+
+
+section.active .sidebar {
+  width: 100px;
+  padding: 30px 25px;
+}
+
+section.active .sidebar .profile .pro_info {
+  margin-right: 0px;
+}
+
+section.active .sidebar ul li a {
+  width: 50px;
+  margin: 0 0 10px;
+}
+ 
+section.active .sidebar ul li a .icon{
+  text-align: center;
+} 
+
+
+section.active .sidebar ul li a .item{
+  width: 0;
+}
+
+section.active .sidebar ul li a .item,
+section.active .sidebar .profile .pro_info{
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+section.active .sidebar ul li a .count {
+  top: 2px;
+  right: 2px;
+  padding: 0px 5px;
+  font-size: 8px;
+}
+
+ul{
+  padding-left: 0px;
+
+}

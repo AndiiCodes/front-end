@@ -1,0 +1,178 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #4285F4;
+}
+.wrapper {
+  width: 450px;
+  overflow: hidden;
+  padding: 28px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+.wrapper .pass-field {
+  height: 65px;
+  width: 100%;
+  position: relative;
+}
+.pass-field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 17px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.pass-field input:focus {
+  padding: 0 16px;
+  border: 2px solid #4285F4;
+}
+.pass-field i {
+  right: 18px;
+  top: 50%;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.wrapper .content {
+  margin: 20px 0 10px;
+}
+.content p {
+  color: #333;
+  font-size: 1.3rem;
+}
+.content .requirement-list {
+  margin-top: 20px;
+}
+.requirement-list li {
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.requirement-list li i {
+  width: 20px;
+  color: #aaa;
+  font-size: 0.6rem;
+}
+.requirement-list li.valid i {
+  font-size: 1.2rem;
+  color: #4285F4;
+}
+.requirement-list li span {
+  margin-left: 12px;
+  color: #333;
+}
+.requirement-list li.valid span {
+  color: #999;
+}
+
+@media screen and (max-width: 500px) {
+  body, .wrapper {
+    padding: 15px;
+  }
+  .wrapper .pass-field {
+    height: 55px;
+  }
+  .pass-field input, .content p  {
+    font-size: 1.15rem;
+  }
+  .pass-field i, .requirement-list li {
+    font-size: 1.1rem;
+  }
+  .requirement-list li span {
+    margin-left: 7px;
+  }
+}
+
+button {
+  appearance: button;
+  width: 250px;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+ }
+ 
+ button:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+ }
+ 
+ button:main, button:focus {
+  user-select: auto;
+ }
+ 
+ button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  
+ }
+ 
+ button:disabled:after {
+  cursor: auto;
+  background-color: #333;
+ }
+ button:disabled {
+  cursor: auto;
+  background-color: #333;
+ }
+ 
+ button:active:after {
+  border-width: 0 0 0px;
+ }
+ 
+ button:active {
+  padding-bottom: 10px;
+ }
+ .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

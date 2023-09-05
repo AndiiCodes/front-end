@@ -1,0 +1,79 @@
+/* index.css  */
+.image-filter-container {
+  margin: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.btn-filter {
+  padding: 8px 16px;
+  margin: 8px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-filter:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.active-filter {
+  background-color: #2980b9;
+}
+
+.filterable-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+  gap: 20px; 
+}
+
+.card-filter {
+  padding: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 290px; 
+}
+
+.card-filter:hover {
+  transform: translateY(-5px);
+}
+
+
+.card-filter img {
+  width: 239px; 
+  height: 231px; 
+  object-fit: cover; 
+  border-radius: 5px; 
+}
+
+.card-title {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card-text {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.hide {
+  display: none;
+}

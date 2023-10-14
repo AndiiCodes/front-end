@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Noto Sans:700|Noto Sans:400');
+
+:root {
+  --font: 'Noto Sans', ui-sans-serif;
+  --p: 1rem;
+  --h: 1.2rem;
+  --white: #fff;
+  --black: #000;
+}
+
+h1, p {
+  margin: 0;
+  line-height: 2;
+}
+
+body {
+  background-image: url("https://assets.codepen.io/9051928/gradient.png");
+  background-size: 100vw;
+  background-position: 0 0;
+  height: 400vh;
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: var(--p);
+  margin: 0;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  z-index: 5;
+  font-size: var(--h);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  
+  background: rgba(225, 225, 225, 0.05);
+  
+  mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+  
+  -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+  inset: -1rem 0;
+}
+
+button {
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  font-family: var(--font);
+  font-size: var(--p);
+  color: var(--white);
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--black);
+  border: 1px solid var(--black);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 2rem;
+  gap: 2rem;
+}

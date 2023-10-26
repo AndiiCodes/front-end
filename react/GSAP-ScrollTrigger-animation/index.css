@@ -1,0 +1,98 @@
+.keyhole {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: #fdcb6e;
+  clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+  z-index: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 72.5vh;
+  left: 50%;
+  z-index: 2;
+  animation: float 1s ease-in-out infinite alternate both;
+}
+.arrow svg {
+  transform: rotate(90deg);
+  stroke: #2d3436;
+  width: 2rem;
+  margin-left: -1rem;
+  height: auto;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font: 400 1.2rem/1.45 "Mulish", sans-serif;
+  background: #dfe6e9;
+  color: #2d3436;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "DM Serif Text", serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 5.2rem;
+}
+
+h2 {
+  font-size: 3.9rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 0rem;
+}
+
+.section--primary {
+  background: #ffeaa7;
+}
+.section--primary figure {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  margin: 0 0 1em 0;
+}
+.section--primary figure img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 100vh;
+}
+.section--primary .section__content {
+  padding-top: 0;
+}
+.section--secondary {
+  background: #a29bfe;
+}
+.section--tertiary {
+  background: #fab1a0;
+}
+.section__content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}

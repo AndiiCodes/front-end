@@ -1,0 +1,252 @@
+@charset "UTF-8";
+:root {
+  --dashOffset: 0;
+  --base: #FFEECC;
+  --baseDarker: #ddd;
+  --contrast: #333;
+  --accent: #f7d794;
+  --accentSecondary: #F3AF70;
+  --accentTertiary: #e15f41;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--base);
+  font: 1rem/1.4 "Nunito", sans-serif;
+  color: var(--contrast);
+  scroll-snap-type: y proximity;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+  fill: none;
+  z-index: 0;
+}
+.stroke__wide {
+  stroke: var(--accent);
+  stroke-width: 2000;
+}
+.stroke__narrow {
+  stroke: var(--accentSecondary);
+  stroke-width: 15;
+  stroke-dasharray: 30 60;
+  stroke-dashoffset: var(--dashOffset);
+}
+.stroke__mask {
+  stroke: var(--base);
+  stroke-width: 15;
+}
+.stroke__blob {
+  fill: var(--accent);
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+.gallery__header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  text-shadow: 0 0 0.35em var(--accent);
+}
+.gallery__image {
+  width: 30%;
+  position: relative;
+  text-align: initial;
+  overflow: hidden;
+  opacity: 0.9;
+}
+.gallery__image::before {
+  content: "";
+  display: block;
+  background: var(--contrast);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  mix-blend-mode: lighten;
+  z-index: 1;
+}
+.gallery__image::after {
+  content: "";
+  display: block;
+  background: var(--accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  opacity: 1;
+  mix-blend-mode: color;
+}
+.gallery__image--small {
+  width: 22.5%;
+}
+.gallery__image--small.gallery__image--11 {
+  padding-top: 22.5%;
+}
+.gallery__image--full {
+  width: 100%;
+}
+.gallery__image--full.gallery__image--11 {
+  padding-top: 100%;
+}
+.gallery__image--full.gallery__image--23 {
+  padding-top: 150%;
+}
+.gallery__image--11 {
+  padding-top: 30%;
+}
+.gallery__image--23 {
+  padding-top: 30%;
+}
+.gallery__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+.gallery__image-caption {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  left: -100px;
+}
+
+.header {
+  text-align: center;
+  font-weight: 700;
+}
+.header--primary {
+  font-size: 7rem;
+  font-weight: 800;
+}
+.header--secondary {
+  font-size: 2.5rem;
+}
+.header--tertiary {
+  font-size: 2rem;
+}
+.header--quatenary {
+  font-size: 1.45rem;
+}
+.header--fancy {
+  cursor: help;
+}
+.header--fancy:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--accentSecondary);
+}
+
+.section {
+  min-height: 56.25vw;
+  max-height: 200vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8.33%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section--columns {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+}
+.section--columns-stretched {
+  align-items: stretch;
+}
+.section--elevated {
+  position: relative;
+  z-index: 1;
+}
+.section--hero img {
+  opacity: 0.6;
+}
+.section__column {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.section__column--half {
+  width: 46%;
+}
+.section__column--half:nth-child(n+3) {
+  margin-top: 2em;
+}
+.section__column--third {
+  width: 30%;
+}
+.section__column--third:nth-child(n+4) {
+  margin-top: 2.5em;
+}
+.section__column-header {
+  margin: 1em 0 0.65em 0;
+  position: relative;
+  z-index: 1;
+}
+.section__column-paragraph {
+  font-size: 1.15rem;
+}
+.section__column-link {
+  color: inherit;
+  text-decoration: none;
+}
+.section__column-link:hover {
+  color: var(--accentTertiary);
+}
+.section__header {
+  margin-bottom: 1em;
+  position: relative;
+  z-index: 1;
+}
+.section__paragraph {
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+.section__link {
+  display: inline-block;
+  margin: 0 auto;
+  font-weight: bold;
+  color: #333;
+}
+.section__link::after {
+  content: "→";
+}

@@ -1,0 +1,242 @@
+:root {
+  --r: 20px;
+  --c: #171717;
+  --light-reflect: inset -5px 20px 2px -20px #fff, inset 5px -20px 2px -20px #fff;
+  --shadow-reflect: inset -19px 1px 2px -20px #000,inset 19px 1px 2px -20px #000, inset 19px 1px 2px -20px #000, inset -15px -26px 3px -30px #000;
+  --hh: 8rem;
+}
+
+body {
+  display: flex;
+  padding: 0 2rem;
+  color: var(--c);
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  background: radial-gradient(#ffffff54 2px, transparent 0) 0 0/40px 40px, radial-gradient(#00000026 2px, transparent 0) -1px 1px/40px 40px, radial-gradient(ellipse at 150% -50%, #6d788f, #fff);
+}
+
+.form {
+  position: relative;
+  --gap: .5rem;
+  max-width: 50rem;
+  flex: 1 1 auto;
+  height: var(--hh);
+  transition: 250ms ease all;
+}
+.form.open {
+  height: calc(var(--hh) * 1.5 + var(--gap));
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input {
+  appearance: none;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  color: var(--c);
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  opacity: 0.3;
+}
+
+@keyframes text {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.form-title {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  animation: text linear 1s forwards;
+  animarion-delay: 1s;
+}
+
+@keyframes gradient {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+.glass {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+  border-radius: var(--r);
+  border: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  text-shadow: 0.25em 0.25em 1px #00000010;
+  --shadow-color: 0deg 0% 64%;
+  --shadow-elevation-high:
+    0.5px 1px 1.1px hsl(var(--shadow-color) / 0.28),
+    1.4px 3.1px 3.4px -0.4px hsl(var(--shadow-color) / 0.27),
+    2.5px 5.3px 5.9px -0.7px hsl(var(--shadow-color) / 0.25),
+    3.9px 8.4px 9.3px -1.1px hsl(var(--shadow-color) / 0.24),
+    6px 12.9px 14.3px -1.5px hsl(var(--shadow-color) / 0.23),
+    9px 19.5px 21.6px -1.8px hsl(var(--shadow-color) / 0.21),
+    13.4px 28.9px 32px -2.2px hsl(var(--shadow-color) / 0.2),
+    19.3px 41.7px 46.2px -2.6px hsl(var(--shadow-color) / 0.19),
+    27.1px 58.5px 64.8px -2.9px hsl(var(--shadow-color) / 0.17),
+    37.1px 80px 88.6px -3.3px hsl(var(--shadow-color) / 0.16);
+  --inner-light: inset 0 -6px 2px -5px #ffffff24, inset 0 -8px 3px -5px #ffffff3b, inset 0 -20px 10px -15px #ffffff5c, inset 7px 25px 10px -20px #ffffff5c;
+  --inner-shadow: inset -20px 5px 10px -20px #00000021, inset -40px 50px 7px -55px #00000021;
+  --external-light: 5px -30px 30px -20px #ffffff70, 5px 10px 30px -20px #ffffff70;
+  --default: var(--external-light), var(--shadow-elevation-high), var(--inner-light), var(--inner-shadow);
+  box-shadow: var(--default);
+}
+.glass:focus {
+  outline: none;
+}
+.glass--gradient {
+  background-position: center;
+  animation: gradient 10s linear infinite;
+  background: linear-gradient(45deg, #85d5e757, #7a9ed254, #ba6ac93d, #de54c217, #f86b2d4f);
+}
+.glass--heading {
+  font-size: 1.1rem;
+}
+.glass--heading:before {
+  --i: 2px;
+  opacity: 0.6;
+}
+.glass--heading:after {
+  --i: 4px;
+}
+.glass--heading:before, .glass--heading:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: var(--i);
+  border-radius: calc(var(--r) - var(--i));
+  box-shadow: var(--light-reflect), var(--shadow-reflect);
+}
+.glass > * {
+  position: relative;
+  z-index: 1;
+}
+.glass:before {
+  --r: 20px;
+  --bp: 50px;
+  --s: calc(0% + var(--bp) + var(--r));
+  --e: calc(100% - var(--bp) - var(--r));
+  --z: calc(0% + var(--bp));
+  --h: calc(100% - var(--bp));
+  content: "";
+  position: absolute;
+}
+
+.form-header {
+  height: var(--hh);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@keyframes icon {
+  0% {
+    rotate: 0deg;
+    scale: 0.8;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    rotate: 180deg;
+    scale: 1.2;
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    rotate: 360deg;
+    scale: 0.8;
+    filter: hue-rotate(0deg);
+  }
+}
+.form-icon {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+  aspect-ratio: 1;
+  flex: 0 0;
+  border-radius: 50px;
+  height: 4rem;
+  box-shadow: var(--light-reflect), var(--shadow-reflect);
+}
+.form-icon:before {
+  animation: icon 5000ms cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(https://cdn.discordapp.com/attachments/1050016262035619861/1159132066592591893/ia.png?ex=651ec55c&is=651d73dc&hm=162828e7743ded23e27d4fe81ee09e4df9f283e32a32bc322b99c116a4f307b7) center/90% 90% no-repeat;
+}
+
+.form-close-button {
+  position: absolute;
+  color: var(--c);
+  background: rgba(255, 255, 255, 0.3);
+  top: 0.75rem;
+  right: 0.75rem;
+  box-shadow: var(--light-reflect), var(--shadow-reflect);
+  display: grid;
+  place-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 250ms ease opacity;
+}
+.open .form-close-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+[id=heading] {
+  transition: 250ms ease all;
+  cursor: pointer;
+}
+.form:not(.open) [id=heading]:hover {
+  scale: 0.99;
+  filter: brightness(0.95);
+}
+.form:not(.open) [id=heading]:active {
+  scale: 0.98;
+  filter: brightness(0.8);
+}
+
+[id=input] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: var(--hh);
+  transition: 500ms ease all;
+  translate: 0 0;
+  opacity: 0;
+}
+.open [id=input] {
+  translate: 0 calc(var(--hh) + var(--gap));
+  height: calc(var(--hh) / 2);
+  opacity: 1;
+  z-index: 2;
+}

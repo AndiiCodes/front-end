@@ -4,9 +4,8 @@
 
 1. Create a Firebase project on the <a href="https://console.firebase.google.com/">Firebase Console. </a>
 2. Follow the on-screen instructions to set up your project.
-3. Enable Email/Password Sign-in Method:
-4. In the Firebase Console, navigate to "Authentication" > "Sign-in method."
-5. Enable the "Email/Password" sign-in method.
+3. In the Firebase Console, navigate to "Authentication" > "Sign-in method."
+4. Enable the "Email/Password" sign-in method.
 
 
 
